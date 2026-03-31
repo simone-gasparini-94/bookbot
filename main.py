@@ -20,8 +20,8 @@ def main():
     try:
         text = get_text(path)
         num_chars = get_num_of_chars(text)
-        list = convert_dict_to_list(num_chars)
-        print_stats(list)
+        char_list = convert_dict_to_list(num_chars)
+        print_stats(char_list)
     except Exception as e:
         print(e)
         sys.exit(1)

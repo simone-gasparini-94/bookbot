@@ -13,12 +13,12 @@ def sort_on(items):
     return list(items.values())[0]
 
 
-def convert_dict_to_list(dict):
-    list = []
-    for key in dict:
-        list.append({key: dict[key]})
-        list.sort(reverse=True, key=sort_on)
-    return list
+def convert_dict_to_list(char_dict):
+    char_list = []
+    for key in char_dict:
+        char_list.append({key: char_dict[key]})
+        char_list.sort(reverse=True, key=sort_on)
+    return char_list
 
 
 def print_stats(chars):
