@@ -1,7 +1,3 @@
-def get_num_of_words(string):
-    return len(string.split())
-
-
 def get_num_of_chars(string):
     chars = {}
     for char in string:
@@ -25,12 +21,7 @@ def convert_dict_to_list(dict):
     return list
 
 
-def print_stats(path, words, chars):
-    print("============ BOOKBOT ============")
-    print(f"Analyzing book found at {path}...")
-    print("----------- Word Count ----------")
-    print(f"Found {words} total words")
-    print("--------- Character Count -------")
+def print_stats(chars):
     for char in chars:
         for key in char:
             if key.isalpha():
