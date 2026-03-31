@@ -4,11 +4,9 @@
 
 Command-line tool that displays the frequency breakdown of every alphabetical character in a text file, sorted in descending order.
 
-## Requirements
+## How to run
 
-- Python 3
-
-## Instructions
+*Note: to run this project you need to have [Python 3](https://www.python.org/downloads/) installed*
 
 Clone this repository:
 
