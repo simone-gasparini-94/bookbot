@@ -1,3 +1,4 @@
+
 # alphacount
 
 ## Description
@@ -20,8 +21,14 @@ Change to the project directory:
 cd alphacount
 ```
 
+Make the program executable:
+
+```bash
+chmod +x alphacount
+```
+
 Run:
 
 ```bash
-python3 main.py <path/to/file.txt>
+./alphacount <path/to/file.txt>
 ```
