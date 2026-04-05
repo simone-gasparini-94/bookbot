@@ -28,11 +28,14 @@ def sort_on(items):
     return list(items.values())[0]
 
 
-def convert_dict_to_list(char_dict):
+def convert_dict_to_list(char_dict, ascending):
     char_list = []
     for key in char_dict:
         char_list.append({key: char_dict[key]})
-    char_list.sort(reverse=True, key=sort_on)
+    if ascending is False:
+        char_list.sort(reverse=True, key=sort_on)
+    else:
+        char_list.sort(reverse=False, key=sort_on)
     return char_list
 
 
