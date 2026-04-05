@@ -16,7 +16,7 @@ def get_text(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(usage="alphacount.py [options] <file>")
+    parser = argparse.ArgumentParser(usage="./alphacount.py [options] <file>")
 
     parser.add_argument("file")
     parser.add_argument(

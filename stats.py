@@ -1,5 +1,5 @@
 def get_count_char(string, character):
-    if character.isalpha() is False:
+    if not character.isalpha():
         raise Exception(f"Error: {character} is not an alphabetic character")
     count = 0
     for char in string:
@@ -14,7 +14,7 @@ def get_num_of_chars(string, character):
         return get_count_char(string, character)
     chars = {}
     for char in string:
-        if char.isalpha() is False:
+        if not char.isalpha():
             continue
         lower_case = char.lower()
         if lower_case not in chars:
@@ -32,7 +32,7 @@ def convert_dict_to_list(char_dict, ascending):
     char_list = []
     for key in char_dict:
         char_list.append({key: char_dict[key]})
-    if ascending is False:
+    if not ascending:
         char_list.sort(reverse=True, key=sort_on)
     else:
         char_list.sort(reverse=False, key=sort_on)
