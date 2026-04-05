@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import sys
 
 from stats import (
@@ -15,12 +16,13 @@ def get_text(path):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1)
-    path = sys.argv[1]
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("file")
+    parser.add_argument("-c")
+    args = parser.parse_args()
     try:
-        text = get_text(path)
+        text = get_text(args.file)
         num_chars = get_num_of_chars(text)
         char_list = convert_dict_to_list(num_chars)
         print_stats(char_list)
