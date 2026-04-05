@@ -39,7 +39,12 @@ def convert_dict_to_list(char_dict, ascending):
     return char_list
 
 
-def print_stats(chars):
-    for char in chars:
-        for key in char:
-            print(f"{key}: {char[key]}")
+def print_stats(chars, n):
+    if n is not None and n < 1:
+        raise Exception("Error: -n must be a positive integer")
+    end = len(chars)
+    if n is not None and n < end:
+        end = n
+    for i in range(0, end):
+        for key in chars[i]:
+            print(f"{key}: {chars[i][key]}")

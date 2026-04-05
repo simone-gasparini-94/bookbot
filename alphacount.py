@@ -23,12 +23,15 @@ def main():
         "-c", metavar="CHAR", help="count occurences of a specific alphabetic character"
     )
     parser.add_argument("-r", action="store_true", help="sort in ascending order")
+    parser.add_argument(
+        "-n", metavar="INT", type=int, help="display only the top N results"
+    )
     args = parser.parse_args()
     try:
         text = get_text(args.file)
         num_chars = get_num_of_chars(text, args.c)
         char_list = convert_dict_to_list(num_chars, args.r)
-        print_stats(char_list)
+        print_stats(char_list, args.n)
     except Exception as e:
         print(e)
         sys.exit(1)
